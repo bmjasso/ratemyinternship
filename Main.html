@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+On this page the user will be able to search and look for an internship that 
+has been listed. 
+-->
+<html>
+    <head>
+        <title>Rate My Internship</title>
+     <!--    <link href="css/styleMain.css" rel="stylesheet" /> -->
+	 
+	 <style>
+	 
+
+
+body{
+    background-color: #ff0033;
+}
+
+
+#main
+{
+    background-color: white;
+    color: black;
+    font-family: "Times New Roman";
+    font-size: 30pt;
+    text-align: center;
+    margin-top: 10%;
+    text-shadow: 3px 2px white;
+    padding-top: 100%;
+}
+#searchInternship{
+	max-height: .9px;
+	margin:auto;
+	
+}
+#internshipSearch{
+    width: 160px;
+    padding: 8px 5px;
+    margin-left: 10%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+#searchCompany{
+	max-height:.9px;
+	margin: auto;
+}
+
+#companySearch{
+    width: 160px;
+    padding: 8px 5px;
+    margin-left: 43%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+#searchPosition{
+	max-height:.9px;
+	margin: auto;
+}
+
+#positionSearch{
+    width: 160px;
+    padding: 8px 5px;
+    margin-left: 75%;
+    box-sizing: border-box;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+.button{
+    background-color: white;
+    padding: 10px 57px;
+    border-radius: 12px;
+    margin-left: 5px;
+    margin-right: 5%;
+    margin-top: 2%;
+    border: 2px solid gray;
+    box-shadow: 0 10px 17px 0
+    rgba(0,0,0,0.2), 0 6px 20px 0
+    rgba(0,0,0,0.19);
+}
+.button:hover{
+    box-shadow: 0 12px 16px 0
+    rgba(0,0,0,0.24), 0 17px 50px 
+    0 rgba(0,0,0,0.19);
+    opacity: 1;
+}
+.button:active{
+    background-color: #e9e7e7;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#internshipButton{
+	margin-left: 10%;
+}
+
+#companyButton{
+	margin-left: 43%;
+}
+
+#positionButton{
+	margin-left: 75%;
+}
+
+	 </style>
+		 
+    </head>
+    <body>
+        <div id='searchInternship'>
+            <input type="text" placeholder="Search For A Internship" id="internshipSearch"/>
+			<br/>
+            <button type="button" class="button" id="internshipButton">Search</button>
+        </div>
+		
+		<div id='searchCompany'>
+		
+		<input type="text" placeholder="Search For A Company" id="companySearch"/>
+		<br/>
+        <button type="button" class="button" id="companyButton">Search</button>
+		
+		</div>
+		
+		<div id='searchPosition'>
+			
+		<input type="text" placeholder="Search For A Position" id="positionSearch" />
+		</br>
+        <button type="button" class="button" id="positionButton">Search</button>
+		
+		</div>
+        
+        <div id='main'>
+        
+        </div>
+    </body>
+</html>
