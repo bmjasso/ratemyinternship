@@ -23,6 +23,11 @@ div{
     margin-top: 10%;
     text-shadow: 3px 2px black;
 }
+a{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
 input{
     width: 250px;
     padding: 8px 15px;
@@ -35,10 +40,19 @@ input{
     background-color: white;
     padding: 15px 62px;
     border-radius: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
     border: 2px solid gray;
     box-shadow: 0 10px 17px 0
     rgba(0,0,0,0.2), 0 6px 20px 0
     rgba(0,0,0,0.19);
+    font-size: 15pt;
+    text-align: left;
+    text-indent: 0px;
+    text-shadow:0 0 white;
+    text-decoration: none;
+    color: black;
 }
 .button:hover{
     box-shadow: 0 12px 16px 0
@@ -59,7 +73,7 @@ input{
             Please enter verification code
             <br/>
             <input type='text' id='verify' placeholder="Verify Account" />
-            <button type="button" class='button'>Verify</button>
+            <a href="Main.html" class="button" id="verify">Verify</a>
         </div>
     </body>
 </html>

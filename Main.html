@@ -9,11 +9,9 @@ has been listed.
      <!--    <link href="css/styleMain.css" rel="stylesheet" /> -->
 	 
 	 <style>
-	 
-
 
 body{
-    background-color: #ff0033;
+    background-color: #033434;
 }
 
 
@@ -22,49 +20,76 @@ body{
     background-color: white;
     color: black;
     font-family: "Times New Roman";
-    font-size: 30pt;
+   
     text-align: center;
-    margin-top: 10%;
-    text-shadow: 3px 2px white;
-    padding-top: 100%;
+    overflow:hidden;
 }
-#searchInternship{
-	max-height: .9px;
-	margin:auto;
-	
+
+#outline{
+    height: 5px;
 }
-#internshipSearch{
+
+#interveiwTips{
+    background-color:#ff3333;
+    float: left;
+    width: 200px;
+    height: 1000px;
+    overflow: hidden;
+    border-right: 1px solid black;
+     font-size: 20pt;
+}
+p{
+    margin-top: 250%;
+}
+#menu{
+    background-color:#ff3333;
+    float: right;
+    width: 200px;
+    height: 1000px;
+    overflow: hidden;
+    border-left: 1px solid black;
+}
+#blog{
+    height:1000;
+    overflow: hidden;
+}
+#searchBar{
+	max-height: 70px;
+	margin: auto;
+	margin-top: 50px;
+        background-color: #ff3333;
+        height: 250px;
+        display: flex;
+}
+
+#searchBar > div{
+    flex: .5;
+}
+#locationSearch{
     width: 160px;
     padding: 8px 5px;
+    margin-top: 30px;
     margin-left: 10%;
     box-sizing: border-box;
     border: 2px solid gray;
     border-radius: 4px;
 }
 
-#searchCompany{
-	max-height:.9px;
-	margin: auto;
-}
+
 
 #companySearch{
     width: 160px;
     padding: 8px 5px;
-    margin-left: 43%;
+    margin-left: 25%;
     box-sizing: border-box;
     border: 2px solid gray;
     border-radius: 4px;
 }
 
-#searchPosition{
-	max-height:.9px;
-	margin: auto;
-}
-
 #positionSearch{
     width: 160px;
     padding: 8px 5px;
-    margin-left: 75%;
+    margin-left: 25%;
     box-sizing: border-box;
     border: 2px solid gray;
     border-radius: 4px;
@@ -94,46 +119,229 @@ body{
     transform: translateY(4px);
 }
 
-#internshipButton{
+#locationButton{
 	margin-left: 10%;
 }
 
 #companyButton{
-	margin-left: 43%;
+	margin-left: 30%;
 }
 
 #positionButton{
-	margin-left: 75%;
+	margin-left: 55%;
+}
+#reviewButton{
+    margin-top: 350px;
+}
+#profileButton{
+    float: right;
+    padding: 10px 10px;
+    margin: auto;
 }
 
+#input {
+  border-box: box-sizing;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#input:focus {
+    outline: 3px solid #ddd;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f6f6f6;
+    max-width: 168px;
+    height: 200px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    overflow:auto;
+}
+
+#locationDropdown{
+      margin-left: 10%;
+}
+
+#companyDropdown{
+      margin-left: 30%;
+}
+
+#positionDropdown{
+      margin-left: 55%;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.show {
+    display:block;
+}
 	 </style>
-		 
+         <script>
+             <!-- creates drop down for loacation button -->
+             function locationDropDown(){
+                 document.getElementById("locationDropdown").classList.toggle("show");
+             }
+             
+             function filter(){
+                 var input, filter, ul, li, a, i;
+  input = document.getElementById("input");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("locationDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } 
+    else {
+      a[i].style.display = "none";
+    }
+  }
+             }
+             
+    <!----------- Creates dropdown for Company button ------------------------->         
+              function companyDropDown(){
+                 document.getElementById("companyDropdown").classList.toggle("show");
+             }
+             
+             function filter(){
+                 var input, filter, ul, li, a, i;
+  input = document.getElementById("input");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("companyDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+             }
+             
+    <!-------------Creates drop down for position button -------------------->         
+                function positionDropDown(){
+                 document.getElementById("positionDropdown").classList.toggle("show");
+             }
+             
+             function filter(){
+                 var input, filter, ul, li, a, i;
+  input = document.getElementById("input");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("positionDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+             }
+         </script>
     </head>
     <body>
-        <div id='searchInternship'>
-            <input type="text" placeholder="Search For A Internship" id="internshipSearch"/>
-			<br/>
-            <button type="button" class="button" id="internshipButton">Search</button>
-        </div>
-		
-		<div id='searchCompany'>
-		
-		<input type="text" placeholder="Search For A Company" id="companySearch"/>
-		<br/>
-        <button type="button" class="button" id="companyButton">Search</button>
-		
-		</div>
-		
-		<div id='searchPosition'>
-			
-		<input type="text" placeholder="Search For A Position" id="positionSearch" />
-		</br>
-        <button type="button" class="button" id="positionButton">Search</button>
-		
-		</div>
+	
+	<div id='outline'>
+            <button type='button' class="button" id='profileButton'>Profile</button>
+	</div>
+
+	
+	
+        <div id='searchBar'>
         
+        <div class="dropdown">
+             <button onclick="locationDropDown()" class="button" id="locationButton">Location</button>
+             
+             <div id="locationDropdown" class="dropdown-content">
+             <input type="text" placeholder="Search..." id="input"
+              onkeyup="filter()">
+             <a href="#">Bethesda,MA</a>
+             <a href="#">Bloomington,IL</a>
+             <a href="#">Burlington,IA</a>
+             <a href="#">Canton,IL</a>
+             <a href="#">Chicago,IL</a>
+             <a href="#">Indianapolis,IN</a>
+             <a href="#">Kearney,NE</a>
+             <a href="#">La Grange Park,IL</a>
+             <a href="#">Livonia, MI</a>
+             <a href="#">Normal,IL</a>
+             <a href="#">Peoria,IL</a>
+             <a href="#">Schaumburg,IL</a>
+             
+             </div>
+        </div>
+             <div class="dropdown">
+          
+             
+             <button onclick="companyDropDown()" class="button" id="companyButton">Company</button>
+             <div id="companyDropdown" class="dropdown-content">
+             <input type="text" placeholder="Search..." id="input"
+              onkeyup="filter()">
+             <a href="#">Alta Equipment Company</a>
+             <a href="#">American Red Cross Blood Services</a>
+             <a href="#">Atlas Financial Holdings, Inc.</a>
+             <a href="#">Bloomington Edge</a>
+             <a href="#">BMO Harris Bank</a>
+             <a href="#">Boys & Girls Clubs of Bloomington-Normal</a>
+             <a href="#">BrightLeaf Homes</a>
+             <a href="#">Buckle</a>
+             <a href="#">C.H. Robinson</a>
+             <a href="#">Camp Kearney</a> 
+             <a href="#">Caterpillar</a>
+             <a href="#">CEFCU</a>
+             <a href="#">CGB Co</a>
+             <a href="#">Children's Home Association of Illinois</a>
+             <a href="#">Cintas</a>
+             <a href="#">CIT Trucks</a>      
+             <a href="#">Clark Construction Group, LLC</a>
+             <a href="#">College Possible</a>
+             <a href="#">Comptroller of the Currency (OCC)</a>  
+             <a href="#">State Farm</a>
+             
+        </div>
+      </div> 
+        
+        <div class="dropdown">
+             <button onclick="positionDropDown()" class="button" id="positionButton">Position</button>
+             
+             <div id="positionDropdown" class="dropdown-content">
+             <input type="text" placeholder="Search..." id="input"
+              onkeyup="filter()">
+             <a href="#">System Development</a>
+             <a href="#">System Analysis</a>
+             <a href="#">Computer Science</a>
+             
+             </div>
+        </div>
+        </div>
         <div id='main'>
-        
+            
+            <div id="interveiwTips">
+                  <p>
+                     <a href="">Interview Tips</a>
+                  </p>
+            </div>  
+            
+            <div id="blog"> 
+            </div>
+         
+            <div id="menu">
+                <button type="button" class='button' id='reviewButton'>Review</button>
+                
+            </div>
         </div>
-    </body>
+
+       
 </html>

@@ -26,6 +26,11 @@ div{
     margin-top: 10%;
     text-shadow: 3px 2px black;
 }
+a{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
 input{
     width: 250px;
     padding: 8px 15px;
@@ -40,11 +45,17 @@ input{
     border-radius: 12px;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 2%;
+    margin-top: 10px;
     border: 2px solid gray;
     box-shadow: 0 10px 17px 0
     rgba(0,0,0,0.2), 0 6px 20px 0
     rgba(0,0,0,0.19);
+    font-size: 15pt;
+    text-align: left;
+    text-indent: 0px;
+    text-shadow:0 0 white;
+    text-decoration: none;
+    color: black;
 }
 .button:hover{
     box-shadow: 0 12px 16px 0
@@ -79,7 +90,7 @@ input{
             <br/>
             <input type="text" id="passwordTwo" />
             <br/>
-            <button type="button" id="submit" class='button'>Submit</button>
+             <a href="Verification.html" class="button" id="submit">Submit</a>
             
         </div>
     </body>
